@@ -20,7 +20,9 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 // Tooltip
-
+$(document).ready(function () {
+  $('div.table-responsive>div.dataTables_wrapper>div.row>div[class="col-sm-12 col-md-6"]:first-child').append('  <div class="d-flex justify-content-end"><button type="submit" class="btn btn-icon btn-outline-info mx-2 " data-bs-placement="left" data-bs-toggle="tooltip" title="" data-bs-original-title="طباعة"><i class="bi bi-printer-fill"></i> طباعة</button><button type="submit" class="btn btn-icon btn-outline-success mx-2 " data-bs-placement="left" data-bs-toggle="tooltip" title="" data-bs-original-title="تصدير"><i class="bi bi-cloud-download-fill"></i> تصدير</button><button type="submit" class="btn btn-icon btn-outline-danger mx-2 " data-bs-placement="left" data-bs-toggle="tooltip" title="" data-bs-original-title="إستيراد"><i class="bi bi-cloud-upload-fill"></i> إستيراد</button></div>');
+});
 /***********************************/
 /*
 index js 
@@ -218,11 +220,6 @@ $('.postpaid').click(function(){
   $('.network-box').hide();
   $('.bank-transfer-box').hide();
 });
-// $('.network').click(function (e) { 
-//   $('.cash-box').hide();
-//   $('.network-box').show();
-//   $('.bank-transfer-box').hide();
-// });
 
 
 
